@@ -229,16 +229,16 @@ export default async function decorate(block) {
   const navTools = nav.querySelector('.nav-tools');
 
   /** Mini Cart */
-  const excludeMiniCartFromPaths = ['/checkout'];
+ // const excludeMiniCartFromPaths = ['/checkout'];
 
-  const minicart = document.createRange().createContextualFragment(`
+/*  const minicart = document.createRange().createContextualFragment(`
      <div class="minicart-wrapper nav-tools-wrapper">
        <button type="button" class="nav-cart-button" aria-label="Cart"></button>
        <div class="minicart-panel nav-tools-panel"></div>
      </div>
-   `);
+   `);*/
 
-  navTools.append(minicart);
+  /*navTools.append(minicart);
 
   const minicartPanel = navTools.querySelector('.minicart-panel');
 
@@ -279,7 +279,7 @@ export default async function decorate(block) {
     },
     { eager: true },
   );
-
+*/
   /** Search */
   // TODO
   const search = document.createRange().createContextualFragment(`
@@ -327,9 +327,9 @@ export default async function decorate(block) {
 
   // Close panels when clicking outside
   document.addEventListener('click', (e) => {
-    if (!minicartPanel.contains(e.target) && !cartButton.contains(e.target)) {
+   /* if (!minicartPanel.contains(e.target) && !cartButton.contains(e.target)) {
       toggleMiniCart(false);
-    }
+    }*/
 
     if (!searchPanel.contains(e.target) && !searchButton.contains(e.target)) {
       toggleSearch(false);

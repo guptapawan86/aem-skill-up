@@ -198,7 +198,8 @@ body {
   font: normal normal normal 18px/24px Roboto, sans-serif;
   margin: 0;
   color: white;
-  background-color:#fff;
+  background-color:#026169;
+  background-color:white;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;

@@ -524,6 +524,7 @@ header .announcement-wrapper .default-content-wrapper {
   margin: auto;
   display: flex;
   justify-content:space-between;
+  background-color: #026169;
 }
 
 .icon-frescopa_logo {

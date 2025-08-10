@@ -22,10 +22,10 @@
       "fields": [
        {
           "component": "text",
+          "name": "text",
           "valueType": "string",
-          "name": "heading",
           "label": "Heading",
-          "value": ""
+          "value": "test"
         }
       ]
     }

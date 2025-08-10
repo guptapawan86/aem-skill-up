@@ -382,5 +382,5 @@ export default async function decorate(block) {
     navSections,
     () => !isDesktop.matches && toggleMenu(nav, navSections, false),
   );
-  renderAuthDropdown(navTools);
+  //renderAuthDropdown(navTools);
 }

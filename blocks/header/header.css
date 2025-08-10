@@ -500,7 +500,7 @@ header .nav-search-input .search_autocomplete .popover-container {
 
 header .announcement-wrapper {
   display:none;
-  background-color: #A33532;
+  background-color: #026169;
   min-height: 30px;
 
   @media (width >= 900px) {

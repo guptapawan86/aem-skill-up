@@ -53,7 +53,7 @@
           "...": "../blocks/quiz/_*.json#/definitions"
         },
         {
-          "...": "../blocks/bloglist/_*.json#/definitions"
+          "...": "../blocks/blog-list/_*.json#/definitions"
         },
         {
           "...": "../blocks/teaser/_*.json#/definitions"

@@ -2,8 +2,8 @@
   "public": {
     "default": {
       "aem" : {
-        "author": "https://author-p137117-e1400624.adobeaemcloud.com",
-        "publish": "https://publish-p137117-e1400624.adobeaemcloud.com"
+        "author": "https://author-p137117-e1400714.adobeaemcloud.com",
+        "publish": "https://publish-p137117-e1400714.adobeaemcloud.com"
       },
       "commerce-core-endpoint": "https://www.aemshop.net/graphql",
       "commerce-endpoint": "https://catalog-service-sandbox.adobe.io/graphql",

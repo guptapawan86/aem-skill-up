@@ -69,12 +69,12 @@ footer .columns-wrapper .columns div {
   vertical-align: top;
   min-width: max-content;
   margin-bottom: 20px;
-  background-color: #026169;
 }
 
 @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 10px;
+     background-color: #026169;
   }
 
   footer .columns > div {

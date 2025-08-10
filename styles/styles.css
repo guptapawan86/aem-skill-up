@@ -332,7 +332,7 @@ button {
 
 /* links */
 a:not(.dropin-design a) {
-  color: var(--frescopa-color-text);
+  color: #026169;
   letter-spacing: var(--type-body-1-strong-letter-spacing);
   text-decoration: underline solid transparent;
   text-decoration-thickness: 2px;

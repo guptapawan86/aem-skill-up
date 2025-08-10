@@ -146,7 +146,7 @@
 
 .home .cards ul li {
   margin: 0;
-  background: var(--background-color);
+  background: #026169;;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0 0 0 / 12%);
 }

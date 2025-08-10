@@ -9,7 +9,7 @@ class LocationMap extends Component {
   componentDidMount() {
     this.loadGoogleMapsApi().then(() => {
       this.map = new google.maps.Map(this.mapContainer, {
-        center: { lat: -34.397, lng: 150.644 },
+        center: { lat: -37.8127253, lng: 144.9668023 },
         zoom: 8,
         disableDefaultUI: true,
         keyboardShortcuts: false,

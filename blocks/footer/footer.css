@@ -43,7 +43,7 @@ footer .footer .section:last-child > .default-content-wrapper {
   margin: 0;
   font-size: 13px;
   text-decoration: none;
-  color: var(--frescopa-color-text);
+  color: white;
   margin-bottom: 10px;  
 }
 
@@ -69,6 +69,7 @@ footer .columns-wrapper .columns div {
   vertical-align: top;
   min-width: max-content;
   margin-bottom: 20px;
+  background-color: #026169;
 }
 
 @media (width >= 900px) {

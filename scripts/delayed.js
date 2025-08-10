@@ -42,8 +42,8 @@ async function initAnalytics() {
       );
 
       // Load events SDK and collector
-      import('./commerce-events-sdk.js');
-      import('./commerce-events-collector.js');
+     // import('./commerce-events-sdk.js');
+     // import('./commerce-events-collector.js');
     }
   } catch (error) {
     console.warn('Error initializing analytics', error);

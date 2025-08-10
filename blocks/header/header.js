@@ -238,7 +238,7 @@ export default async function decorate(block) {
      </div>
    `);
 
-  //navTools.append(minicart);
+  navTools.append(minicart);
 
   const minicartPanel = navTools.querySelector('.minicart-panel');
 

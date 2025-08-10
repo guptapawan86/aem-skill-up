@@ -1,0 +1,7 @@
+mountpoints:
+  /:
+    url: "https://author-p137117-e1400714.adobeaemcloud.com/bin/franklin.delivery/guptapawan86/aem-skill-up/main"
+    type: "markup"
+    suffix: ".html"
+folders:
+  /products/: /products/default

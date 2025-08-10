@@ -184,7 +184,7 @@
     ]
   },
   {
-    "id": "bloglist",
+    "id": "blog-list",
     "fields": [
       {
         "component": "text",
@@ -192,22 +192,6 @@
         "valueType": "string",
         "label": "Heading",
         "value": "test"
-      }
-    ]
-  },
-  {
-    "id": "brand",
-    "fields": [
-      {
-        "component": "aem-content-fragment",
-        "name": "offerpath",
-        "value": "",
-        "label": "Offer Content Fragment path",
-        "valueType": "string",
-        "variationName": "contentFragmentVariation",
-        "validation": {
-          "rootPath": "/content/dam/aem-skill-up/en"
-        }
       }
     ]
   },
@@ -246,51 +230,6 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "enrichment",
-    "fields": [
-      {
-        "component": "select",
-        "name": "type",
-        "label": "Type",
-        "description": "What enrichment type to match with",
-        "options": [
-          {
-            "name": "Product",
-            "value": "product"
-          },
-          {
-            "name": "Category",
-            "value": "category"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "position",
-        "label": "Position",
-        "description": "Position to match with",
-        "options": [
-          {
-            "name": "Below Product",
-            "value": "below-product"
-          },
-          {
-            "name": "Above Product",
-            "value": "above-product"
-          },
-          {
-            "name": "Below Category",
-            "value": "below-category"
-          },
-          {
-            "name": "Above Category",
-            "value": "above-category"
-          }
-        ]
       }
     ]
   },

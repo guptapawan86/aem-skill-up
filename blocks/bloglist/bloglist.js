@@ -1,6 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
+ debugger;
   const indexResponse = await fetch('/../sitemap.json');
   if (!indexResponse.ok) {
     console.error('Failed to fetch sitemap.json:', indexResponse.statusText);

@@ -154,7 +154,7 @@
   --background-color: var(--color-neutral-50);
   --nav-height: 70px;
   --site-width: 1360px;
-  --frescopa-color-background: #026169;
+  --frescopa-color-background: #F4E9DC;
   --frescopa-color-brand: #A33532;
   --frescopa-color-primary: #00647D;
   --frescopa-color-secondary: #DC6E52;
@@ -197,9 +197,8 @@ html {
 body {
   font: normal normal normal 18px/24px Roboto, sans-serif;
   margin: 0;
-  color: white;
-  background-color:#026169 !important;
-  background-color:white;
+  color: #58181D;
+  background-color:#fff;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;

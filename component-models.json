@@ -4884,99 +4884,8 @@
         "valueType": "string",
         "variationName": "contentFragmentVariation",
         "validation": {
-          "rootPath": "/content/dam/frescopa/en"
+          "rootPath": "/content/dam/aem-skill-up/en"
         }
-      }
-    ]
-  },
-  {
-    "id": "product-details",
-    "fields": []
-  },
-  {
-    "id": "product-list-page-custom",
-    "fields": [
-      {
-        "component": "number",
-        "name": "category",
-        "label": "Category",
-        "valueType": "number",
-        "value": 4,
-        "description": "Current Category ID"
-      },
-      {
-        "component": "text",
-        "name": "urlPath",
-        "label": "URL Path",
-        "valueType": "string",
-        "value": "gear",
-        "description": "Current Category URL Path"
-      },
-      {
-        "component": "multiselect",
-        "name": "type",
-        "label": "Type",
-        "options": [
-          {
-            "name": "None",
-            "value": ""
-          },
-          {
-            "name": "Search",
-            "value": "search"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "product-list-page",
-    "fields": [
-      {
-        "component": "number",
-        "name": "category",
-        "label": "Category",
-        "valueType": "number",
-        "value": 4,
-        "description": "Current Category ID"
-      },
-      {
-        "component": "text",
-        "name": "urlPath",
-        "label": "URL Path",
-        "valueType": "string",
-        "value": "gear",
-        "description": "Current Category URL Path"
-      },
-      {
-        "component": "multiselect",
-        "name": "type",
-        "label": "Type",
-        "options": [
-          {
-            "name": "None",
-            "value": ""
-          },
-          {
-            "name": "Search",
-            "value": "search"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "product-recommendations",
-    "fields": []
-  },
-  {
-    "id": "product-teaser",
-    "fields": [
-      {
-        "component": "sku",
-        "name": "sku",
-        "label": "Product SKU",
-        "valueType": "string"
       }
     ]
   },
@@ -5568,23 +5477,23 @@
             "name": "Background Color",
             "children": [
               {
-                "name": "Frescopa Red",
+                "name": "Red",
                 "value": "frescopa-background-red"
               },
               {
-                "name": "Frescopa Yellow",
+                "name": "Yellow",
                 "value": "frescopa-background-yellow"
               },
               {
-                "name": "Frescopa Blue",
+                "name": "Blue",
                 "value": "frescopa-background-blue"
               },
               {
-                "name": "Frescopa Beige",
+                "name": "Beige",
                 "value": "frescopa-background-beige"
               },
               {
-                "name": "Frescopa Black",
+                "name": "Black",
                 "value": "frescopa-background-black"
               }
             ]

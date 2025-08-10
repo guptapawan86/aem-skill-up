@@ -64,10 +64,5 @@
         ]
       }
     ],
-    "filters": [
-      {
-        "id": "video",
-        "components": []
-      }
-    ]
+    "filters": []
   }

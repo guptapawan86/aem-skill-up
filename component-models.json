@@ -184,14 +184,30 @@
     ]
   },
   {
-    "id": "blog-list",
+    "id": "bloglist",
     "fields": [
       {
         "component": "text",
+        "name": "text",
         "valueType": "string",
-        "name": "heading",
         "label": "Heading",
-        "value": ""
+        "value": "test"
+      }
+    ]
+  },
+  {
+    "id": "brand",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "offerpath",
+        "value": "",
+        "label": "Offer Content Fragment path",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation",
+        "validation": {
+          "rootPath": "/content/dam/aem-skill-up/en"
+        }
       }
     ]
   },

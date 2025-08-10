@@ -577,23 +577,23 @@
             "name": "Background Color",
             "children": [
               {
-                "name": "Frescopa Red",
+                "name": "Red",
                 "value": "frescopa-background-red"
               },
               {
-                "name": "Frescopa Yellow",
+                "name": "Yellow",
                 "value": "frescopa-background-yellow"
               },
               {
-                "name": "Frescopa Blue",
+                "name": "Blue",
                 "value": "frescopa-background-blue"
               },
               {
-                "name": "Frescopa Beige",
+                "name": "Beige",
                 "value": "frescopa-background-beige"
               },
               {
-                "name": "Frescopa Black",
+                "name": "Black",
                 "value": "frescopa-background-black"
               }
             ]

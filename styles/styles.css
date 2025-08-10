@@ -197,7 +197,7 @@ html {
 body {
   font: normal normal normal 18px/24px Roboto, sans-serif;
   margin: 0;
-  color: #58181D;
+  color: white;
   background-color:#fff;
   display: grid;
   grid-template-rows: auto 1fr auto;

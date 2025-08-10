@@ -8,7 +8,7 @@
 }
 
 .cards > ul > li {
-  background-color: var(--background-color);
+  background-color: #026169;
 }
 
 .cards .cards-card-body {

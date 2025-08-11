@@ -75,6 +75,9 @@
         },
         {
           "...": "../blocks/carousel/_*.json#/definitions"
+        },
+        {
+          "...": "../blocks/faqs/_*.json#/definitions"
         }
       ]
     }

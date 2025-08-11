@@ -91,7 +91,8 @@
         "sticky-cta",
         "quiz",
         "content-fragment",
-        "carousel"
+        "carousel",
+        "faqs"
       ]
     }
   ]

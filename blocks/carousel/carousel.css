@@ -59,7 +59,7 @@
 }
 
 .carousel .carousel-slide .carousel-slide-image {
-    width: 75%;
+    width: 52.5%;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -79,7 +79,7 @@
     width: 100%;
     object-fit: contain;
     object-position: center;
-    background-color: #f0f0f0;
+    background-color: #026169;
 }
 
 .carousel .carousel-slide .carousel-slide-container {

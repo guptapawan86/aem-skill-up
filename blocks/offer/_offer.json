@@ -28,7 +28,7 @@
                 "valueType": "string",
                 "variationName": "contentFragmentVariation",
                 "validation": {
-                    "rootPath": "/content/dam/AEM-Skill-Up/"
+                  "rootPath": "/content/dam/AEM-Skill-Up"
                 }
               }
             ]

@@ -43,11 +43,11 @@
 .hero h3 {
   max-width: none;
   margin: 0;
-  color: #424242;
+  color: #026169;
   font-weight: 400;
   z-index: 2;
   position: relative;
-  font-size: 1rem;
+  font-size: 34px;
   line-height: 1.3;
 }
 

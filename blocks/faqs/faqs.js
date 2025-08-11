@@ -24,7 +24,7 @@ export default async function decorate(block) {
     const faqTitleLeft = createElement('div', 'faq-title-left');
     const toggle = createElement('div', 'faq-title-right');
     const anchorId = row.children[2]?.textContent || `faq-${index}`;
-    toggle.textContent = 'Expand (+)';
+    toggle.textContent = 'Open (+)';
     faqTitleLeft.append(...label.childNodes);
     faqTitle.append(faqTitleLeft);
     faqTitle.append(toggle);

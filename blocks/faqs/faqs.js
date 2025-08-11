@@ -15,7 +15,7 @@ function addEvent(faqTitle, placeholders) {
 }
 
 export default async function decorate(block) {
-  const placeholders = await fetchPlaceholders();
+  //const placeholders = await fetchPlaceholders();
   const faqPanel = createElement('div', 'faq-panel');
   [...block.children].forEach((row, index) => {
     // decorate faq item label
@@ -24,11 +24,11 @@ export default async function decorate(block) {
     const faqTitleLeft = createElement('div', 'faq-title-left');
     const toggle = createElement('div', 'faq-title-right');
     const anchorId = row.children[2]?.textContent || `faq-${index}`;
-    toggle.textContent = `${placeholders.showdetail}`;
+    toggle.textContent = '+';
     faqTitleLeft.append(...label.childNodes);
     faqTitle.append(faqTitleLeft);
     faqTitle.append(toggle);
-    addEvent(faqTitle, placeholders);
+    addEvent(faqTitle, "+");
     // decorate faq item body
     const contentWrapper = row.children[1];
     contentWrapper.className = 'faq-content-wrapper';
@@ -41,7 +41,7 @@ export default async function decorate(block) {
     // open the faq item when anchor id matches
     if (window.location.hash.substring(1) === anchorId) {
       faqItem.classList.add('visible');
-      toggle.textContent = `${placeholders.hidedetail}`;
+      toggle.textContent = '-';
     }
     moveInstrumentation(row, faqItem);
     faqItem.append(faqTitle, content);

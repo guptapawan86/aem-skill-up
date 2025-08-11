@@ -59,7 +59,7 @@
 }
 
 .carousel .carousel-slide .carousel-slide-image {
-    width: 52.5%;
+    width: 45.9%;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -185,7 +185,7 @@
 /* Responsive Design */
 @media (width >= 900px) {
     .carousel {
-        width: 80%;
+        width: 100%;
     }
 
     .carousel .carousel-slide {

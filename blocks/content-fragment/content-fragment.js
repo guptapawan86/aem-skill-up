@@ -7,7 +7,7 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 export default async function decorate(block) {
   const aemauthorurl = getMetadata('authorurl') || '';
   const aempublishurl = getMetadata('publishurl') || 'https://publish-p137117-e1400714.adobeaemcloud.com';
-  const persistedquery = '/graphql/execute.json/AEM-Mel-Skill-UP-CF/achievement';
+  const persistedquery = '/graphql/execute.json/AEM-Skill-Up/achievement?q=abc';
   const contentPath = block.querySelector(':scope div:nth-child(1) > div a')?.textContent?.trim();
   const variationname = block.querySelector(':scope div:nth-child(2) > div')?.textContent?.trim()?.toLowerCase()?.replace(' ', '_') || 'master';
 

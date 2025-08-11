@@ -37,7 +37,7 @@
 .faqs .faq-item .faq-title .faq-title-right {
     line-height: 1.25rem;
     font-weight: var(--font-weight-normal);
-    font-size: 0.875rem;
+    font-size: 1.25rem;
 }
 
 .faqs .faq-item .faq-content {

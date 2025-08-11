@@ -19,27 +19,48 @@ export default async function decorate(block) {
 
   const options = { credentials: 'include' };
 
-  const data = await fetch(url, options)
+  const response = await fetch(url, options)
     .then((res) => res.json())
-    .then((resJson) => resJson.data?.achievementModelList?.items?.[0]);
+    .then((resJson) => resJson.data?.achievementModelList?.items);
 
-  if (!data) {
+  if (!response || response.length === 0) {
     block.innerHTML = '<p>No achievement data found.</p>';
     return;
   }
-  /* eslint no-underscore-dangle: 0 */
-  const itemId = `urn:aemconnection:${contentPath}/jcr:content/data/${variationname}`;
-  block.setAttribute('data-aue-type', 'container');
-  block.innerHTML = `
-    <div class="achievement-card" data-aue-resource=${itemId} data-aue-label="achievement content fragment" data-aue-type="reference" data-aue-filter="cf">
+
+  // Create container for multiple achievements
+  const achievementsContainer = document.createElement('div');
+  achievementsContainer.className = 'achievements-container';
+
+  // Iterate through all achievements
+  response.forEach((data, index) => {
+    if (!data) return;
+
+    /* eslint no-underscore-dangle: 0 */
+    const itemId = `urn:aemconnection:${contentPath}/jcr:content/data/${variationname}`;
+
+    const achievementCard = document.createElement('div');
+    achievementCard.className = 'achievement-card';
+    achievementCard.setAttribute('data-aue-resource', `${itemId}[${index}]`);
+    achievementCard.setAttribute('data-aue-label', `achievement content fragment ${index + 1}`);
+    achievementCard.setAttribute('data-aue-type', 'reference');
+    achievementCard.setAttribute('data-aue-filter', 'cf');
+
+    achievementCard.innerHTML = `
       <div class="achievement-image" style="background-image: url('${aempublishurl}${data?.image?._dynamicUrl}');"></div>
       <div class="achievement-content">
-        <span class="achievement-category" data-aue-prop="category" data-aue-label="category" data-aue-type="text">${data?.category}</span>
-        <h3 class="achievement-title" data-aue-prop="achievementTitle" data-aue-label="title" data-aue-type="text">${data?.achievementTitle}</h3>
-        <p class="achievement-description" data-aue-prop="description" data-aue-label="description" data-aue-type="richtext">${data?.description?.plaintext}</p>
+        <span class="achievement-category" data-aue-prop="category" data-aue-label="category" data-aue-type="text">${data?.category || ''}</span>
+        <h3 class="achievement-title" data-aue-prop="achievementTitle" data-aue-label="title" data-aue-type="text">${data?.achievementTitle || ''}</h3>
+        <p class="achievement-description" data-aue-prop="description" data-aue-label="description" data-aue-type="richtext">${data?.description?.plaintext || ''}</p>
       </div>
-    </div>
-  `;
+    `;
+
+    achievementsContainer.appendChild(achievementCard);
+  });
+
+  // Set container attributes for AEM Universal Editor
+  block.setAttribute('data-aue-type', 'container');
+  block.appendChild(achievementsContainer);
 
   if (!isAuthor) {
     moveInstrumentation(block, null);

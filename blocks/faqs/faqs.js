@@ -9,7 +9,7 @@ function addEvent(faqTitle, placeholders) {
     const faqToggle = faqTitle.querySelector('.faq-title-right');
     if (faqToggle) {
       faqToggle.textContent = faqItem.classList.contains('visible')
-        ? `${placeholders.hidedetail}` : `${placeholders.showdetail}`;
+        ? 'Expand (+)' : 'Close (-)';
     }
   });
 }

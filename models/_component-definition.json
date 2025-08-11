@@ -72,6 +72,9 @@
         },
         {
           "...": "../blocks/content-fragment/_*.json#/definitions"
+        },
+        {
+          "...": "../blocks/carousel/_*.json#/definitions"
         }
       ]
     }

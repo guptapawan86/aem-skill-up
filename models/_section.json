@@ -90,7 +90,8 @@
         "reward-sticky",
         "sticky-cta",
         "quiz",
-        "content-fragment"
+        "content-fragment",
+        "carousel"
       ]
     }
   ]

@@ -1,10 +1,15 @@
 .carousel {
-    /* background-color: var(--black); */
+    border-radius: 12px;
+    margin-bottom: 40px;
+    background: url('../../styles/backgrounds/reward-banner-v1.svg') no-repeat;
+    background-size: cover;
+    background-position: 15% 0%;
 }
 
 .carousel .carousel-slides-container {
-    padding: 0;
+    padding: 20px;
     position: relative;
+    border-radius: 12px;
 }
 
 .carousel .carousel-slides,
@@ -19,6 +24,7 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     overflow: scroll clip;
+    border-radius: 12px;
 }
 
 .carousel .carousel-slides::-webkit-scrollbar {
@@ -36,15 +42,19 @@
     position: relative;
     width: 100%;
     min-height: min(40rem, calc(100svh - var(--nav-height)));
-    background-color: #000a19;
+    background: transparent;
+    border-radius: 12px;
+    padding: 20px;
 }
 
 .carousel .carousel-slide:has(.carousel-slide-content[data-align="center"]) {
     align-items: center;
+    justify-content: center;
 }
 
 .carousel .carousel-slide:has(.carousel-slide-content[data-align="right"]) {
     align-items: flex-end;
+    justify-content: space-around;
 }
 
 .carousel .carousel-slide .carousel-slide-image picture {
@@ -60,35 +70,47 @@
 
 .carousel .carousel-slide .carousel-slide-container {
     z-index: 1;
-    padding: 1rem;
-    margin: 1.5rem 3rem;
-    color: white;
+    padding: 20px;
+    margin: 10px;
+    color: #fff;
     position: relative;
-    width: var(--slide-content-width, auto);
-    background-color: rgb(255 255 2555 / 10%);
-    border-radius: 20px;
+    width: var(--slide-content-width, 50%);
+    background: transparent;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
 
-    p {
-        margin: 0;
-    }
+.carousel .carousel-slide .carousel-slide-container p {
+    margin: 10px;
+    padding: 0;
+}
 
-    div:nth-of-type(1) {
-        color: var(--featured-color);
-        font-size: 3rem;
-        text-transform: uppercase;
-    }
+.carousel .carousel-slide .carousel-slide-container div:nth-of-type(1) {
+    color: #fff;
+    font-size: 32px;
+    font-family: Baskerville, serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 32px;
+    margin: 10px;
+}
 
-    div:nth-of-type(2) {
-        color: var(--light-color);
-        font-size: 1.5rem;
-    }
+.carousel .carousel-slide .carousel-slide-container div:nth-of-type(2) {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 10px;
 }
 
 .carousel .carousel-slide-indicators {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    background-color: var(--black);
+    background: transparent;
+    border-radius: 12px;
+    padding: 20px;
 }
 
 .carousel .carousel-slide-indicator {
@@ -129,5 +151,33 @@
 @keyframes fill-progress {
     100% {
         transform: scaleX(1)
+    }
+}
+
+/* Responsive Design - Rewards Style */
+@media (width >= 900px) {
+    .carousel .carousel-slide {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .carousel .carousel-slide .carousel-slide-container {
+        width: 50%;
+        margin: 0;
+    }
+
+    .carousel .carousel-slide .carousel-slide-container p {
+        margin: 0;
+    }
+}
+
+@media (width < 900px) {
+    .carousel .carousel-slide .carousel-slide-container {
+        width: 80%;
+    }
+
+    .carousel .carousel-slide .carousel-slide-container p {
+        margin: 0;
+        padding: 0;
     }
 }

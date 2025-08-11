@@ -69,6 +69,12 @@
         },
         {
           "...": "../blocks/sticky-cta/_*.json#/definitions"
+        },
+        {
+          "...": "../blocks/video/_*.json#/definitions"
+        },
+        {
+          "...": "../blocks/content-fragment/_*.json#/definitions"
         }
       ]
     },

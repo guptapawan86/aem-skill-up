@@ -9,7 +9,7 @@ function addEvent(faqTitle, placeholders) {
     const faqToggle = faqTitle.querySelector('.faq-title-right');
     if (faqToggle) {
       faqToggle.textContent = faqItem.classList.contains('visible')
-        ? 'Close (-)' : 'Expand (+)';
+        ? 'Close (-)' : 'Open (+)';
     }
   });
 }
@@ -28,7 +28,7 @@ export default async function decorate(block) {
     faqTitleLeft.append(...label.childNodes);
     faqTitle.append(faqTitleLeft);
     faqTitle.append(toggle);
-    addEvent(faqTitle, "Expand (+)");
+    addEvent(faqTitle, "Open (+)");
     // decorate faq item body
     const contentWrapper = row.children[1];
     contentWrapper.className = 'faq-content-wrapper';

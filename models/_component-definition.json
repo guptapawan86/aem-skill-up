@@ -62,9 +62,6 @@
           "...": "../blocks/reward/_*.json#/definitions"
         },
         {
-          "...": "../blocks/sticky-cta/_*.json#/definitions"
-        },
-        {
           "...": "../blocks/video/_*.json#/definitions"
         },
         {

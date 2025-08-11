@@ -314,31 +314,6 @@
           }
         }
       ]
-    },
-    {
-      "title": "Product",
-      "id": "product",
-      "components": []
-    },
-    {
-      "title": "Cart",
-      "id": "cart",
-      "components": []
-    },
-    {
-      "title": "Order",
-      "id": "order",
-      "components": []
-    },
-    {
-      "title": "Account",
-      "id": "account",
-      "components": []
-    },
-    {
-      "title": "Return",
-      "id": "return",
-      "components": []
     }
   ]
 }

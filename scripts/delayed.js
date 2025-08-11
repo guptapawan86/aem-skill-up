@@ -56,7 +56,7 @@ if (document.prerendering) {
   });
   document.addEventListener('prerenderingchange', initAnalytics, { once: true });
 } else {
-  initAnalytics();
+  //initAnalytics();
 }
 
 // add delayed functionality here

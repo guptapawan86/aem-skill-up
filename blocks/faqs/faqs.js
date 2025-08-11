@@ -9,7 +9,7 @@ function addEvent(faqTitle, placeholders) {
     const faqToggle = faqTitle.querySelector('.faq-title-right');
     if (faqToggle) {
       faqToggle.textContent = faqItem.classList.contains('visible')
-        ? 'Expand (+)' : 'Close (-)';
+        ? 'Close (-)' : 'Expand (+)';
     }
   });
 }
@@ -24,11 +24,11 @@ export default async function decorate(block) {
     const faqTitleLeft = createElement('div', 'faq-title-left');
     const toggle = createElement('div', 'faq-title-right');
     const anchorId = row.children[2]?.textContent || `faq-${index}`;
-    toggle.textContent = '+';
+    toggle.textContent = 'Expand (+)';
     faqTitleLeft.append(...label.childNodes);
     faqTitle.append(faqTitleLeft);
     faqTitle.append(toggle);
-    addEvent(faqTitle, "+");
+    addEvent(faqTitle, "Expand (+)");
     // decorate faq item body
     const contentWrapper = row.children[1];
     contentWrapper.className = 'faq-content-wrapper';
@@ -41,7 +41,7 @@ export default async function decorate(block) {
     // open the faq item when anchor id matches
     if (window.location.hash.substring(1) === anchorId) {
       faqItem.classList.add('visible');
-      toggle.textContent = '-';
+      toggle.textContent = 'Close (-)';
     }
     moveInstrumentation(row, faqItem);
     faqItem.append(faqTitle, content);

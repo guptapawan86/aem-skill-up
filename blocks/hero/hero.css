@@ -63,8 +63,7 @@
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #1976d2;
-  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.3);
+  border: 0px solid #1976d2;
   flex-shrink: 0;
 }
 

@@ -5,12 +5,12 @@
 }
 
 .faqs .faq-item .faq-title {
-    color: var(--dark-color);
-    padding: 0.9375rem;
+    color: white;
+    padding: 3rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    background: var(--ivory-gray);
+    background: #026169;
     cursor: pointer;
 }
 

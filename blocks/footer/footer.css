@@ -39,14 +39,6 @@ footer .footer .section:last-child > .default-content-wrapper {
   width: 100%;
 }
 
-p,li {
-  margin: 0;
-  font-size: 13px;
-  text-decoration: none;
-  color: #026169;
-  margin-bottom: 10px;
-  list-style-type: none;
-}
 
 .footer p,li {
   margin: 0;

@@ -272,14 +272,14 @@
       {
         "component": "aem-content-fragment",
         "name": "path",
-        "value": "",
+        "value": "/content/dam/aem-skill-up/exercise/pawan-gupta/achievement/excellence-in-strategic-leadership",
         "label": "Content Fragment path",
         "valueType": "string"
       },
       {
         "component": "text-input",
         "name": "variation",
-        "value": "/content/dam/aem-skill-up/exercise/pawan-gupta/achievement/excellence-in-strategic-leadership",
+        "value": "",
         "label": "Variation",
         "valueType": "string"
       }

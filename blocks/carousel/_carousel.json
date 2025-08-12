@@ -41,7 +41,10 @@
           "valueType": "string",
           "name": "image",
           "label": "Background Image",
-          "multi": false
+          "multi": false,
+          "validation": {
+            "rootPath": "/content/dam/aem-skill-up"
+          }
         },
         {
           "component": "text",

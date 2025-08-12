@@ -14,8 +14,8 @@ export default async function decorate(block) {
   block.innerHTML = '';
   const isAuthor = document.querySelector('*[data-aue-resource]') !== null;
   const url = window?.location?.origin?.includes('author')
-    ? `${aemauthorurl}${persistedquery};path=${contentPath};variation=${variationname};ts=${Math.random() * 1000}`
-    : `${aempublishurl}${persistedquery};path=${contentPath};variation=${variationname};ts=${Math.random() * 1000}`;
+    ? `${aemauthorurl}${persistedquery};variation=${variationname};ts=${Math.random() * 1000}`
+    : `${aempublishurl}${persistedquery};variation=${variationname};ts=${Math.random() * 1000}`;
 
   const options = { credentials: 'include' };
 

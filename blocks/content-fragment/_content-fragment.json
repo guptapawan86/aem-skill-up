@@ -28,15 +28,11 @@
           "valueType": "string"
         },
         {
-          "component": "select",
+          "component": "text-input",
           "name": "variation",
-          "value": "",
+          "value": "/content/dam/aem-skill-up/exercise/pawan-gupta/achievement/excellence-in-strategic-leadership",
           "label": "Variation",
-          "valueType": "string",
-          "options": [
-            { "name": "Default", "value": "master" },
-            { "name": "Variation 1", "value": "Variation 1" }
-          ]
+          "valueType": "string"
         }
       ]
     }

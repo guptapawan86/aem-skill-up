@@ -53,7 +53,7 @@ export default async function initializeDropins() {
     // Initialize Global Drop-ins
     await import('./auth.js');
 
-    import('./cart.js');
+    //import('./cart.js');
 
     events.on('aem/lcp', async () => {
       // Recaptcha

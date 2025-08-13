@@ -1,16 +1,7 @@
-/* eslint-disable import/no-unresolved */
-
-// Drop-in Tools
-import { events } from '@dropins/tools/event-bus.js';
-
-// Cart dropin
-import { publishShoppingCartViewEvent } from '@dropins/storefront-cart/api.js';
 
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
-import renderAuthCombine from './renderAuthCombine.js';
-import { renderAuthDropdown } from './renderAuthDropdown.js';
 import { rootLink } from '../../scripts/scripts.js';
 
 // media query match that indicates mobile/tablet width
@@ -228,58 +219,6 @@ export default async function decorate(block) {
 
   const navTools = nav.querySelector('.nav-tools');
 
-  /** Mini Cart */
- // const excludeMiniCartFromPaths = ['/checkout'];
-
-/*  const minicart = document.createRange().createContextualFragment(`
-     <div class="minicart-wrapper nav-tools-wrapper">
-       <button type="button" class="nav-cart-button" aria-label="Cart"></button>
-       <div class="minicart-panel nav-tools-panel"></div>
-     </div>
-   `);*/
-
-  /*navTools.append(minicart);
-
-  const minicartPanel = navTools.querySelector('.minicart-panel');
-
-  const cartButton = navTools.querySelector('.nav-cart-button');
-
-  if (excludeMiniCartFromPaths.includes(window.location.pathname)) {
-    cartButton.style.display = 'none';
-  }
-
-  // load nav as fragment
-  const miniCartMeta = getMetadata('mini-cart');
-  const miniCartPath = miniCartMeta ? new URL(miniCartMeta, window.location).pathname : '/mini-cart';
-  loadFragment(miniCartPath).then((miniCartFragment) => {
-    minicartPanel.append(miniCartFragment.firstElementChild);
-  });
-
-  async function toggleMiniCart(state) {
-    const show = state ?? !minicartPanel.classList.contains('nav-tools-panel--show');
-    const stateChanged = show !== minicartPanel.classList.contains('nav-tools-panel--show');
-    minicartPanel.classList.toggle('nav-tools-panel--show', show);
-
-    if (stateChanged && show) {
-      publishShoppingCartViewEvent();
-    }
-  }
-
-  cartButton.addEventListener('click', () => toggleMiniCart());
-
-  // Cart Item Counter
-  events.on(
-    'cart/data',
-    (data) => {
-      if (data?.totalQuantity) {
-        cartButton.setAttribute('data-count', data.totalQuantity);
-      } else {
-        cartButton.removeAttribute('data-count');
-      }
-    },
-    { eager: true },
-  );
-*/
   /** Search */
   // TODO
   const search = document.createRange().createContextualFragment(`
@@ -378,9 +317,5 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 
-  renderAuthCombine(
-    navSections,
-    () => !isDesktop.matches && toggleMenu(nav, navSections, false),
-  );
-  //renderAuthDropdown(navTools);
+
 }

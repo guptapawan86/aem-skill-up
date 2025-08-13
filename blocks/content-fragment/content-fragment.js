@@ -9,6 +9,7 @@ export default async function decorate(block) {
   const aempublishurl = getMetadata('publishurl') || 'https://publish-p137117-e1400714.adobeaemcloud.com';
   const persistedquery = '/graphql/execute.json/AEM-Skill-Up/achievement';
   const contentPath = block.querySelector(':scope div:nth-child(1) > div a')?.textContent?.trim();
+
   const variationname = block.querySelector(':scope div:nth-child(2) > div')?.textContent?.trim()?.toLowerCase()?.replace(' ', '_') || 'master';
 
   block.innerHTML = '';
@@ -32,10 +33,17 @@ export default async function decorate(block) {
   const achievementsContainer = document.createElement('div');
   achievementsContainer.className = 'achievements-container';
 
+  const userIdFromUrl = getSegmentAfter(window.location.pathname,"brand-gallery");
   // Iterate through all achievements
   response.forEach((data, index) => {
     if (!data) return;
 
+    // 1️⃣ Get the value after "/exercise/"
+    const pathUserId = getSegmentAfter(data._path,"exercise");
+
+ if (pathUserId.indexOf(userIdFromUrl) <= -1 && pathUserId !== "pawan-gupta") {
+     return;
+ }
     /* eslint no-underscore-dangle: 0 */
     const itemId = `urn:aemconnection:${contentPath}/jcr:content/data/${variationname}`;
 
@@ -66,4 +74,10 @@ export default async function decorate(block) {
     moveInstrumentation(block, null);
     block.querySelectorAll('*').forEach((elem) => moveInstrumentation(elem, null));
   }
+}
+
+function getSegmentAfter(path, segmentName) {
+  const regex = new RegExp(`/${segmentName}/([^/]+)`);
+  const match = path.match(regex);
+  return match ? match[1] : null;
 }

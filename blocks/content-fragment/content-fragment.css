@@ -77,8 +77,8 @@
   .achievement-image {
     width: 100%;
     flex: 0 0 auto;
-    height: 105px;
-    border-radius: 8px;
+    height: 125px;
+
   }
 
   .achievement-content {

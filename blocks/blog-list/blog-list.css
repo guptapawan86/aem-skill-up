@@ -37,3 +37,34 @@
 
     }
 }
+
+/* Mobile adjustments */
+@media (width < 900px) {
+  .blog-list {
+    margin-top: 20px;
+  }
+
+  .blog-list ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .blog-list li {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .blog-list li a {
+    display: block;
+    text-decoration: none;
+  }
+
+  .blog-list ul > li img {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    max-height: 220px;
+    aspect-ratio: 16 / 9;
+  }
+}

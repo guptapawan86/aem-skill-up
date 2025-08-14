@@ -33,7 +33,7 @@
 .teaser.block > .foreground > .text > .eyebrow {
     display: block;
     text-align: left;
-    font: normal normal bold 12px/16px Roboto, sans-serif;
+    /* font: normal normal bold 12px/16px Roboto, sans-serif; */
     letter-spacing: 0.96px;
     color: #FFF;
     text-transform: uppercase;
@@ -44,17 +44,20 @@
   margin: 0;
   color: #FFF;
   letter-spacing: 0;
-  font: normal normal normal 54px/50px Baskerville, serif;
+  color: #58181D;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  /* font: normal normal normal 54px/50px Baskerville, serif; */
 }
 
-@media (width >= 900px) {
+/* @media (width >= 900px) {
   .teaser.block > .foreground > .text > .title :where(h1,h2,h3,h4,h5,h6) {
       margin: 0;
       color: #FFF;
       letter-spacing: 0;
       font: normal normal normal 56px/56px Baskerville, serif;
   }
-}
+} */
 
 
 .teaser.block.dark > .foreground > .text > .title {
@@ -63,6 +66,7 @@
 
 .teaser.block.dark > .foreground > .text > .eyebrow {
     color: #58181D;
+    padding-bottom: 15px;
 }
 
 
@@ -100,6 +104,16 @@
 
   .teaser.block .long-description {
     color: #FFF;
+  }
+
+  /* Mobile: remove background image and use light blue background */
+  @media (width < 900px) {
+    .teaser.block {
+      background-color: #62C8D5;
+    }
+    .teaser.block > .background {
+      display: none;
+    }
   }
 
   @media (width >= 900px) {

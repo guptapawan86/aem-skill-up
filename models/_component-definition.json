@@ -78,9 +78,6 @@
         },
         {
           "...": "../blocks/custom-asset-one/_*.json#/definitions"
-        },
-        {
-          "...": "../blocks/curated-cards/_*.json#/definitions"
         }
       ]
     }

@@ -28,8 +28,7 @@
       "content-fragment",
       "carousel",
       "faqs",
-      "custom-asset-one",
-      "curated-cards"
+      "custom-asset-one"
     ]
   },
   {
@@ -57,12 +56,6 @@
       "image",
       "button",
       "title"
-    ]
-  },
-  {
-    "id": "curated-cards",
-    "components": [
-      "curated-card"
     ]
   },
   {

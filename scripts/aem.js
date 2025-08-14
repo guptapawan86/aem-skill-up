@@ -312,7 +312,7 @@ function createOptimizedPicture(
     const source = document.createElement('source');
     if (br.media) source.setAttribute('media', br.media);
     source.setAttribute('type', 'image/webp');
-    source.setAttribute('srcset', `${pathname}?width=${br.width}&format=webply&optimize=medium`);
+    source.setAttribute('srcset', `${pathname}?width=${br.width}&format=webp&optimize=medium`);
     picture.appendChild(source);
   });
 
@@ -326,9 +326,25 @@ function createOptimizedPicture(
     } else {
       const img = document.createElement('img');
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
+      if (eager) img.setAttribute('fetchpriority', 'high');
+      img.setAttribute('decoding', 'async');
       img.setAttribute('alt', alt);
       picture.appendChild(img);
-      img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
+      const finalSrc = `${pathname}?width=${br.width}&format=${ext}&optimize=medium`;
+      img.setAttribute('src', finalSrc);
+
+      // Preload eager LCP candidate to make the request discoverable early
+      if (eager) {
+        const existing = document.head.querySelector(`link[rel="preload"][as="image"][href="${finalSrc}"]`);
+        if (!existing) {
+          const link = document.createElement('link');
+          link.setAttribute('rel', 'preload');
+          link.setAttribute('as', 'image');
+          link.setAttribute('href', finalSrc);
+          link.setAttribute('fetchpriority', 'high');
+          document.head.appendChild(link);
+        }
+      }
     }
   });
 

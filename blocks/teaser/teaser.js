@@ -22,7 +22,8 @@ export function generateTeaserDOM(props, classes) {
   const picture = pictureContainer.querySelector('picture');
   if (picture) {
     const pictureSrc = picture.querySelector('img').src;
-    const optimizedPicture = createOptimizedPicture(pictureSrc, '', false, [{ width: '1360' }]);
+    // Mark teaser background as eager so it becomes LCP, with high fetch priority
+    const optimizedPicture = createOptimizedPicture(pictureSrc, '', true, [{ width: '1360' }]);
     pictureContainer.textContent = '';
     pictureContainer.appendChild(optimizedPicture);
   }

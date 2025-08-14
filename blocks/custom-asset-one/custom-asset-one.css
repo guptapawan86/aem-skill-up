@@ -1,0 +1,148 @@
+/* Custom Asset One Block Styles */
+.custom-asset-one-block {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.asset-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.asset-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.asset-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.asset-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.asset-container:hover .asset-image {
+    transform: scale(1.05);
+}
+
+.asset-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        transparent 100%
+    );
+    padding: 40px 30px 30px;
+    color: white;
+}
+
+.asset-content {
+    text-align: left;
+}
+
+.asset-title {
+    font-family: 'Adobe Clean', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.asset-description {
+    font-family: 'Adobe Clean', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-asset-one-block {
+        padding: 16px;
+    }
+    
+    .asset-image-wrapper {
+        height: 300px;
+    }
+    
+    .asset-overlay {
+        padding: 30px 20px 20px;
+    }
+    
+    .asset-title {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+    
+    .asset-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .asset-image-wrapper {
+        height: 250px;
+    }
+    
+    .asset-overlay {
+        padding: 25px 16px 16px;
+    }
+    
+    .asset-title {
+        font-size: 1.25rem;
+    }
+    
+    .asset-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Loading State */
+.asset-image.loading {
+    opacity: 0.6;
+    filter: blur(2px);
+}
+
+/* Error State */
+.asset-image.error {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+
+/* Animation for content appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.asset-content {
+    animation: fadeInUp 0.6s ease-out;
+}

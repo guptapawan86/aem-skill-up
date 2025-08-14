@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Custom Image One final",
+      "title": "DM Open API Block ",
       "id": "custom-asset-one",
       "plugins": {
         "xwalk": {

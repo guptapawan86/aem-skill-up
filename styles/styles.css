@@ -463,6 +463,10 @@ main .section.highlight {
   padding: var(--spacing-xbig) 0;
 }
 
+main .section.highlight .reward-left {
+  font-size: 16px;
+}
+
 /* Base Design System Tokens */
 .dropin-design.dropin-design {
   --background-none: none 0 0% no-repeat padding-box;

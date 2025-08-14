@@ -344,20 +344,6 @@
         }
       },
       {
-        "component": "text",
-        "name": "cc_imageText",
-        "label": "Alt Text",
-        "valueType": "string",
-        "condition": {
-          "===": [
-            {
-              "var": "useDM"
-            },
-            true
-          ]
-        }
-      },
-      {
         "component": "boolean",
         "label": "Auto Smart Crop",
         "name": "cc_smartCrop",
@@ -386,15 +372,6 @@
             true
           ]
         }
-      },
-      {
-        "component": "aem-tag",
-        "name": "curated-card-tags",
-        "label": "Tags for Card",
-        "valueType": "string",
-        "rootPath": "/content/cq:tags/world-bank/content-type",
-        "description": "Tags for the curated card",
-        "required": true
       },
       {
         "component": "text",

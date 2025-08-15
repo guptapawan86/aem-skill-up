@@ -75,9 +75,6 @@
         },
         {
           "...": "../blocks/article/_*.json#/definitions"
-        },
-        {
-          "...": "../blocks/custom-asset-one/_*.json#/definitions"
         }
       ]
     }

@@ -41,7 +41,7 @@ export default async function decorate(block) {
     // 1️⃣ Get the value after "/exercise/"
     const pathUserId = getSegmentAfter(data._path,"exercise");
 
- if (pathUserId.indexOf(userIdFromUrl) <= -1 && pathUserId !== "pawan-gupta") {
+ if (pathUserId.indexOf(userIdFromUrl.replace(/\.html$/, '')) <= -1 && pathUserId !== "pawan-gupta") {
      return;
  }
     /* eslint no-underscore-dangle: 0 */

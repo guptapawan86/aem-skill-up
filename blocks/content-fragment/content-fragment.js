@@ -79,5 +79,5 @@ export default async function decorate(block) {
 function getSegmentAfter(path, segmentName) {
   const regex = new RegExp(`/${segmentName}/([^/]+)`);
   const match = path.match(regex);
-  return match ? match[1] : null;
+  return match ? match[1].toLowerCase() : null;
 }

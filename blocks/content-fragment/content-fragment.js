@@ -22,7 +22,7 @@ export default async function decorate(block) {
 
   const response = await fetch(url, options)
     .then((res) => res.json())
-    .then((resJson) => resJson.data?.achievementModelList?.items);
+    .then((resJson) => resJson.data?.achievementModelList?.items.filter((item) => item?._path?.includes("/exercise/")));
 
   if (!response || response.length === 0) {
     block.innerHTML = '<p>No achievement data found.</p>';

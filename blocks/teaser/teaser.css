@@ -23,7 +23,7 @@
     .teaser.block > .foreground {
       padding: 10px 87px;
       display: flex;
-      justify-content: center;
+      justify-content: left;
       flex-direction: column;
       height: 100%;
     }

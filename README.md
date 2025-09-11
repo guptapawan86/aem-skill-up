@@ -5,3 +5,5 @@ EDS Website -> https://main--aem-skill-up--guptapawan86.aem.live/
 
 Asset -> https://author-p137117-e1400714.adobeaemcloud.com/ui#/aem/assets.html/content/dam/aem-skill-up/exercise
 
+EDS Live Site URL -> https://main--aem-skill-up--guptapawan86.aem.live/
+

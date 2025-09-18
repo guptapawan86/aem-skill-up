@@ -25,11 +25,14 @@
                 "name": "offerpath",
                 "value": "",
                 "label": "Offer Content Fragment path",
-                "valueType": "string",
-                "variationName": "contentFragmentVariation",
-                "validation": {
-                  "rootPath": "/content/dam/aem-skill-up"
-                }
+                "valueType": "string"
+              },
+              {
+                "component": "text-input",
+                "name": "variation",
+                "value": "",
+                "label": "Variation",
+                "valueType": "string"
               }
             ]
         }

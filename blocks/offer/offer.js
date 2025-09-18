@@ -6,7 +6,9 @@ export default async function decorate(block) {
   const aemauthorurl = getAEMAuthor();
   const persistedquery = '/graphql/execute.json/AEM-Skill-Up/OfferByPath';
   const offerpath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
+ 
   let variationname = 'main';
+     variationname = block.querySelector(':scope div:nth-child(2) > div').textContent.trim();
   const variationElem = block.querySelector(':scope div:nth-child(2) > div > p');
   if (variationElem && variationElem.innerHTML) {
     variationname = variationElem.innerHTML.trim();

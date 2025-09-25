@@ -353,12 +353,15 @@
         "component": "aem-content-fragment",
         "name": "offerpath",
         "value": "",
-        "label": "Offer Content Fragment path11",
-        "valueType": "string",
-        "variationName": "contentFragmentVariation",
-        "validation": {
-          "rootPath": "/content/dam"
-        }
+        "label": "Offer Content Fragment path",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "variation",
+        "value": "",
+        "label": "Variation",
+        "valueType": "string"
       }
     ]
   },

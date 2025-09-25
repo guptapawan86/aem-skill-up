@@ -24,7 +24,7 @@
                 "component": "aem-content-fragment",
                 "name": "offerpath",
                 "value": "",
-                "label": "Offer Content Fragment path",
+                "label": "Offer Content Fragment path11",
                 "valueType": "string",
                 "variationName": "contentFragmentVariation",
                 "validation": {

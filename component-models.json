@@ -354,14 +354,11 @@
         "name": "offerpath",
         "value": "",
         "label": "Offer Content Fragment path",
-        "valueType": "string"
-      },
-      {
-        "component": "text-input",
-        "name": "variation",
-        "value": "",
-        "label": "Variation2222",
-        "valueType": "string"
+        "valueType": "string",
+        "variationName": "contentFragmentVariation",
+        "validation": {
+          "rootPath": "/content/dam/"
+        }
       }
     ]
   },

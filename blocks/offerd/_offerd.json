@@ -1,7 +1,7 @@
 {
     "definitions": [
         {
-            "title": "OfferD",
+            "title": "OfferD Component",
             "id": "offerd",
             "plugins": {
               "xwalk": {

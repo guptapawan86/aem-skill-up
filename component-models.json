@@ -354,10 +354,29 @@
         "name": "offerpath",
         "value": "",
         "label": "Offer Content Fragment path",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "variation",
+        "value": "",
+        "label": "Variation1111",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "offerd",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "offerpath",
+        "value": "",
+        "label": "Offer Content Fragment path",
         "valueType": "string",
         "variationName": "contentFragmentVariation",
         "validation": {
-          "rootPath": "/content/dam/aem-skill-up"
+          "rootPath": "/content/dam/"
         }
       }
     ]

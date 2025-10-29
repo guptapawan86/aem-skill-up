@@ -9,3 +9,5 @@ EDS Live Site URL -> https://main--aem-skill-up--guptapawan86.aem.live/
 
 DOC Based Authoring -> https://main--skillup--sarathraju.aem.live/
 
+AEM Sidekick Chrome Extension -> https://chromewebstore.google.com/detail/aem-sidekick/igkmdomcgoebiipaifhmpfjhbjccggml?hl=en
+

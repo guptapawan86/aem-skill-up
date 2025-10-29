@@ -7,3 +7,5 @@ Asset -> https://author-p137117-e1400714.adobeaemcloud.com/ui#/aem/assets.html/c
 
 EDS Live Site URL -> https://main--aem-skill-up--guptapawan86.aem.live/
 
+DOC Based Authoring -> https://main--skillup--sarathraju.aem.live/
+

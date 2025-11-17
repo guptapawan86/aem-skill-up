@@ -74,8 +74,8 @@ function createLink(linkContainer, className = 'service-link') {
  * @returns {Element} - Decorated service item element
  */
 function decorateServiceItem(row) {
-  // Extract fields from row (icon, title, description, link1, link2, link3)
-  const [iconContainer, titleContainer, descriptionContainer, link1Container, link2Container, link3Container] = [...row.children];
+  // Extract fields from row (icon, iconAlt, title, description, link1, link2, link3)
+  const [iconContainer, iconAltContainer, titleContainer, descriptionContainer, link1Container, link2Container, link3Container] = [...row.children];
   
   const serviceItem = createElement('div', 'service-item');
   
@@ -83,7 +83,15 @@ function decorateServiceItem(row) {
   const iconSection = createElement('div', 'service-icon');
   const icon = iconContainer?.querySelector('picture') || iconContainer?.querySelector('img');
   if (icon) {
-    iconSection.appendChild(icon.cloneNode(true));
+    const iconClone = icon.cloneNode(true);
+    // Apply alt text if provided
+    const altText = iconAltContainer?.textContent.trim();
+    if (altText && iconClone.tagName === 'IMG') {
+      iconClone.alt = altText;
+    } else if (altText && iconClone.querySelector('img')) {
+      iconClone.querySelector('img').alt = altText;
+    }
+    iconSection.appendChild(iconClone);
   }
   
   // Title section

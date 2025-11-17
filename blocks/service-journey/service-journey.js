@@ -8,10 +8,15 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
  * @returns {Element|null} - Header element or null
  */
 function createHeader(headerData) {
+  if (!headerData || headerData.length < 3) {
+    return null; // Need at least banner, alt, and title
+  }
+  
   const [bannerImageContainer, bannerImageAltContainer, titleContainer, descriptionContainer] = headerData;
   
   // Check if we have at least a title
-  if (!titleContainer?.textContent.trim()) {
+  const titleText = titleContainer?.textContent?.trim();
+  if (!titleText) {
     return null;
   }
   
@@ -21,13 +26,14 @@ function createHeader(headerData) {
   
   // Add title
   const title = createElement('h2', 'header-title');
-  title.textContent = titleContainer.textContent.trim();
+  title.textContent = titleText;
   textSection.appendChild(title);
   
   // Add description if exists
-  if (descriptionContainer?.innerHTML.trim()) {
+  const descHtml = descriptionContainer?.innerHTML?.trim();
+  if (descHtml) {
     const description = createElement('div', 'header-description');
-    description.innerHTML = descriptionContainer.innerHTML;
+    description.innerHTML = descHtml;
     textSection.appendChild(description);
   }
   
@@ -36,13 +42,16 @@ function createHeader(headerData) {
   if (picture) {
     const img = picture.querySelector('img');
     if (img) {
-      const optimizedPicture = createOptimizedPicture(img.src, img.alt || bannerImageAltContainer?.textContent.trim() || '', false, [{ width: '600' }]);
+      const altText = bannerImageAltContainer?.textContent?.trim() || img.alt || '';
+      const optimizedPicture = createOptimizedPicture(img.src, altText, false, [{ width: '600' }]);
       imageSection.appendChild(optimizedPicture);
     }
   }
   
   header.appendChild(textSection);
-  header.appendChild(imageSection);
+  if (imageSection.children.length > 0) {
+    header.appendChild(imageSection);
+  }
   
   return header;
 }
@@ -140,18 +149,31 @@ function decorateServiceItem(row) {
 export default function decorate(block) {
   const rows = [...block.children];
   
-  // First row contains all header data as cells (bannerImage, bannerImageAlt, title, description)
-  const headerRow = rows[0];
-  const headerData = headerRow ? [...headerRow.children] : [];
-  const serviceRows = rows.slice(1); // Remaining rows are service items
+  if (rows.length === 0) {
+    return;
+  }
   
-  // Create header section
-  const header = createHeader(headerData);
+  // Determine if first row is header data or service item
+  // Header row has 4 cells (bannerImage, bannerImageAlt, title, description)
+  // Service item row has 7 cells (icon, iconAlt, title, desc, link1, link2, link3)
+  const firstRow = rows[0];
+  const firstRowCells = firstRow ? firstRow.children.length : 0;
+  
+  let header = null;
+  let serviceRows = rows;
+  
+  // If first row has 4 cells, it's the header data
+  if (firstRowCells === 4) {
+    const headerData = [...firstRow.children];
+    header = createHeader(headerData);
+    serviceRows = rows.slice(1);
+  }
+  // Otherwise, all rows are service items (no header)
   
   // Create service items container
   const container = createElement('div', 'service-journey-container');
   
-  // Process each remaining row as a service item
+  // Process each service item row
   serviceRows.forEach((row) => {
     const serviceItem = decorateServiceItem(row);
     container.appendChild(serviceItem);

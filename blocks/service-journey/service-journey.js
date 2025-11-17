@@ -140,9 +140,10 @@ function decorateServiceItem(row) {
 export default function decorate(block) {
   const rows = [...block.children];
   
-  // First 4 rows are header data (bannerImage, bannerImageAlt, title, description)
-  const headerData = rows.slice(0, 4).map((row) => row.firstElementChild);
-  const serviceRows = rows.slice(4); // Remaining rows are service items
+  // First row contains all header data as cells (bannerImage, bannerImageAlt, title, description)
+  const headerRow = rows[0];
+  const headerData = headerRow ? [...headerRow.children] : [];
+  const serviceRows = rows.slice(1); // Remaining rows are service items
   
   // Create header section
   const header = createHeader(headerData);

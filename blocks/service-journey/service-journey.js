@@ -4,51 +4,50 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 /**
  * Creates the header section with banner image and text
- * @param {Array} headerData - Array of header field containers [bannerImage, bannerImageAlt, title, description]
+ * @param {Array} cells - Array of header cells [bannerImage, bannerImageAlt, title, description]
  * @returns {Element|null} - Header element or null
  */
-function createHeader(headerData) {
-  if (!headerData || headerData.length < 3) {
-    return null; // Need at least banner, alt, and title
-  }
-  
-  const [bannerImageContainer, bannerImageAltContainer, titleContainer, descriptionContainer] = headerData;
-  
-  // Check if we have at least a title
-  const titleText = titleContainer?.textContent?.trim();
-  if (!titleText) {
+function createHeader(cells) {
+  if (!cells || cells.length !== 4) {
     return null;
   }
   
+  const [bannerImageCell, bannerImageAltCell, titleCell, descriptionCell] = cells;
+  
   const header = createElement('div', 'service-journey-header');
   
-  // Create text section with title
+  // Text section
   const textSection = createElement('div', 'header-text');
-  const title = createElement('h2', 'header-title');
-  title.textContent = titleText;
-  textSection.appendChild(title);
   
-  // Add description if exists
-  const descHtml = descriptionContainer?.innerHTML?.trim();
-  if (descHtml && descHtml !== '<p><br></p>' && descHtml !== '<br>') {
+  // Add title
+  const titleText = titleCell?.textContent?.trim();
+  if (titleText) {
+    const title = createElement('h2', 'header-title');
+    title.textContent = titleText;
+    textSection.appendChild(title);
+  }
+  
+  // Add description
+  const descContent = descriptionCell?.innerHTML?.trim();
+  if (descContent && descContent !== '<p><br></p>' && descContent !== '<br>') {
     const description = createElement('div', 'header-description');
-    description.innerHTML = descHtml;
+    description.innerHTML = descContent;
     textSection.appendChild(description);
   }
   
-  // Create image section
+  // Image section
   const imageSection = createElement('div', 'header-image');
-  const picture = bannerImageContainer?.querySelector('picture');
+  const picture = bannerImageCell?.querySelector('picture');
   if (picture) {
     const img = picture.querySelector('img');
     if (img) {
-      const altText = bannerImageAltContainer?.textContent?.trim() || img.alt || '';
+      const altText = bannerImageAltCell?.textContent?.trim() || img.alt || '';
       const optimizedPicture = createOptimizedPicture(img.src, altText, false, [{ width: '600' }]);
       imageSection.appendChild(optimizedPicture);
     }
   }
   
-  // Always add text section first, then image
+  // Add both sections to header
   header.appendChild(textSection);
   header.appendChild(imageSection);
   
@@ -152,22 +151,22 @@ export default function decorate(block) {
     return;
   }
   
-  // Determine if first row is header data or service item
-  // Header row has 4 cells (bannerImage, bannerImageAlt, title, description)
-  // Service item row has 7 cells (icon, iconAlt, title, desc, link1, link2, link3)
+  // Get all cells from the first row
   const firstRow = rows[0];
-  const firstRowCells = firstRow ? firstRow.children.length : 0;
+  const cells = [...firstRow.children];
   
   let header = null;
-  let serviceRows = rows;
+  let serviceRows = [];
   
-  // If first row has 4 cells, it's the header data
-  if (firstRowCells === 4) {
-    const headerData = [...firstRow.children];
-    header = createHeader(headerData);
+  // Check if this is a header row (has 4 cells) or service item row (has 7 cells)
+  if (cells.length === 4) {
+    // First row is header
+    header = createHeader(cells);
     serviceRows = rows.slice(1);
+  } else {
+    // No header, all rows are service items
+    serviceRows = rows;
   }
-  // Otherwise, all rows are service items (no header)
   
   // Create service items container
   const container = createElement('div', 'service-journey-container');

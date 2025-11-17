@@ -21,23 +21,23 @@ function createHeader(headerData) {
   }
   
   const header = createElement('div', 'service-journey-header');
-  const textSection = createElement('div', 'header-text');
-  const imageSection = createElement('div', 'header-image');
   
-  // Add title
+  // Create text section with title
+  const textSection = createElement('div', 'header-text');
   const title = createElement('h2', 'header-title');
   title.textContent = titleText;
   textSection.appendChild(title);
   
   // Add description if exists
   const descHtml = descriptionContainer?.innerHTML?.trim();
-  if (descHtml) {
+  if (descHtml && descHtml !== '<p><br></p>' && descHtml !== '<br>') {
     const description = createElement('div', 'header-description');
     description.innerHTML = descHtml;
     textSection.appendChild(description);
   }
   
-  // Add banner image if exists
+  // Create image section
+  const imageSection = createElement('div', 'header-image');
   const picture = bannerImageContainer?.querySelector('picture');
   if (picture) {
     const img = picture.querySelector('img');
@@ -48,10 +48,9 @@ function createHeader(headerData) {
     }
   }
   
+  // Always add text section first, then image
   header.appendChild(textSection);
-  if (imageSection.children.length > 0) {
-    header.appendChild(imageSection);
-  }
+  header.appendChild(imageSection);
   
   return header;
 }

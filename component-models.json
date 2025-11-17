@@ -613,6 +613,62 @@
     ]
   },
   {
+    "id": "service-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "description": "Upload an icon or image (recommended size: 80x80px)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "iconAlt",
+        "value": "",
+        "label": "Icon Description",
+        "description": "Alternative text for the icon (for accessibility)"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "description": "The main heading for this service stage",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "value": "",
+        "label": "Description",
+        "description": "Brief description of this service stage"
+      },
+      {
+        "component": "aem-content",
+        "name": "service_link1",
+        "label": "Link 1",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "service_link2",
+        "label": "Link 2",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "service_link3",
+        "label": "Link 3",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "storelocator",
     "fields": [
       {

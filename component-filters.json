@@ -28,8 +28,7 @@
       "content-fragment",
       "carousel",
       "faqs",
-      "offerd",
-      "service-journey"
+      "offerd"
     ]
   },
   {
@@ -63,6 +62,12 @@
     "id": "faqs",
     "components": [
       "faq"
+    ]
+  },
+  {
+    "id": "service-journey",
+    "components": [
+      "service-item"
     ]
   }
 ]

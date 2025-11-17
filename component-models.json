@@ -613,6 +613,44 @@
     ]
   },
   {
+    "id": "service-journey",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bannerImage",
+        "label": "Banner Image",
+        "description": "Header illustration/image (recommended size: 600x400px)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bannerImageAlt",
+        "value": "",
+        "label": "Banner Image Alt Text",
+        "description": "Alternative text for the banner image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "headerTitle",
+        "value": "",
+        "label": "Header Title",
+        "description": "Main heading for the service journey section",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "headerDescription",
+        "value": "",
+        "label": "Header Description",
+        "description": "Subtitle or description text below the main heading"
+      }
+    ]
+  },
+  {
     "id": "service-item",
     "fields": [
       {

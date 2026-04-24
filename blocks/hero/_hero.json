@@ -51,7 +51,6 @@
   {
     "id": "richtext",
     "rte": {
-      // Configure which tools appear in toolbar
       "toolbar": {
         "format": [
           "bold",
@@ -79,9 +78,7 @@
           "insert"
         ]
       },
-      // Customize individual action behavior
       "actions": {
-        // Format actions with HTML tag choices
         "bold": {
           "tag": "strong",
           "shortcut": "Mod-B",
@@ -91,7 +88,6 @@
           "tag": "em",
           "shortcut": "Mod-I"
         },
-        // List actions with content wrapping
         "bullet_list": {
           "wrapInParagraphs": true,
           "label": "Bullet List"
@@ -99,7 +95,6 @@
         "ordered_list": {
           "wrapInParagraphs": false
         },
-        // Link actions with target control
         "link": {
           "hideTarget": false,
           "shortcut": "Mod-K",
@@ -108,18 +103,15 @@
         "unlink": {
           "label": "Remove Link"
         },
-        // Image actions with picture wrapping
         "image": {
-          "wrapInPicture": false, // Use <img> tag instead of <picture>
+          "wrapInPicture": false,
           "shortcut": "Mod-Shift-I",
-          "label": "Insert Image",
+          "label": "Insert Image"
         },
-        // Special characters with custom additions
         "special_characters": {
           "label": "Special Characters",
-          "appendCharacters": [{ "character": "\u2605", "title": "Black star" }],
+          "appendCharacters": [{ "character": "\u2605", "title": "Black star" }]
         },
-        // Other actions with basic customization
         "h1": {
           "shortcut": "Mod-Alt-1",
           "label": "Main Heading"

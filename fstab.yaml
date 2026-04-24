@@ -1,3 +1,6 @@
+# Universal Editor / preview load content config from the franklin.delivery URL below
+# (GitHub org/repo/branch). Local edits to component-*.json apply only after you push
+# to that branch (or change this URL to match your fork/branch).
 mountpoints:
   /:
     url: "https://author-p137117-e1400714.adobeaemcloud.com/bin/franklin.delivery/guptapawan86/aem-skill-up/main"

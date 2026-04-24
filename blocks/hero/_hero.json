@@ -47,5 +47,85 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+  {
+    "id": "richtext",
+    "rte": {
+      // Configure which tools appear in toolbar
+      "toolbar": {
+        "format": [
+          "bold",
+          "italic"
+        ],
+        "blocks": [
+          "paragraph",
+          "h1",
+          "h2"
+        ],
+        "list": [
+          "bullet_list",
+          "ordered_list"
+        ],
+        "insert": [
+          "link",
+          "unlink",
+          "image",
+          "special_characters"
+        ],
+        "sections": [
+          "format",
+          "blocks",
+          "list",
+          "insert"
+        ]
+      },
+      // Customize individual action behavior
+      "actions": {
+        // Format actions with HTML tag choices
+        "bold": {
+          "tag": "strong",
+          "shortcut": "Mod-B",
+          "label": "Bold"
+        },
+        "italic": {
+          "tag": "em",
+          "shortcut": "Mod-I"
+        },
+        // List actions with content wrapping
+        "bullet_list": {
+          "wrapInParagraphs": true,
+          "label": "Bullet List"
+        },
+        "ordered_list": {
+          "wrapInParagraphs": false
+        },
+        // Link actions with target control
+        "link": {
+          "hideTarget": false,
+          "shortcut": "Mod-K",
+          "label": "Add Link"
+        },
+        "unlink": {
+          "label": "Remove Link"
+        },
+        // Image actions with picture wrapping
+        "image": {
+          "wrapInPicture": false, // Use <img> tag instead of <picture>
+          "shortcut": "Mod-Shift-I",
+          "label": "Insert Image",
+        },
+        // Special characters with custom additions
+        "special_characters": {
+          "label": "Special Characters",
+          "appendCharacters": [{ "character": "\u2605", "title": "Black star" }],
+        },
+        // Other actions with basic customization
+        "h1": {
+          "shortcut": "Mod-Alt-1",
+          "label": "Main Heading"
+        }
+      }
+    }
+  }
+]
 }

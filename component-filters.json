@@ -70,12 +70,33 @@
       "toolbar": {
         "format": [
           "bold",
-          "italic"
+          "italic",
+          "underline",
+          "strike"
+        ],
+        "alignment": [
+          "left",
+          "center",
+          "right",
+          "justify"
+        ],
+        "direction": [
+          "rtl",
+          "ltr"
+        ],
+        "indentation": [
+          "indent",
+          "outdent"
         ],
         "blocks": [
           "paragraph",
           "h1",
-          "h2"
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6",
+          "code_block"
         ],
         "list": [
           "bullet_list",
@@ -87,11 +108,17 @@
           "image",
           "special_characters"
         ],
+        "sr_script": [
+          "superscript",
+          "subscript"
+        ],
+        "editor": [
+          "removeformat"
+        ],
         "sections": [
           "format",
-          "blocks",
-          "list",
-          "insert"
+          "alignment",
+          "list"
         ]
       },
       "actions": {

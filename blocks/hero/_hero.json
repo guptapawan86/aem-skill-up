@@ -52,31 +52,16 @@
     "id": "richtext",
     "rte": {
       "toolbar": {
-        "format": [
-          "bold",
-          "italic"
-        ],
-        "blocks": [
-          "paragraph",
-          "h1",
-          "h2"
-        ],
-        "list": [
-          "bullet_list",
-          "ordered_list"
-        ],
-        "insert": [
-          "link",
-          "unlink",
-          "image",
-          "special_characters"
-        ],
-        "sections": [
-          "format",
-          "blocks",
-          "list",
-          "insert"
-        ]
+        "format": ["bold", "italic", "underline", "strike"],
+        "alignment": ["left", "center", "right", "justify"],
+        "direction": ["rtl", "ltr"],
+        "indentation": ["indent", "outdent"],
+        "blocks": ["paragraph", "h1", "h2", "h3", "h4", "h5", "h6", "code_block"],
+        "list": ["bullet_list", "ordered_list"],
+        "insert": ["link", "unlink", "image", "special_characters"],
+        "sr_script": ["superscript", "subscript"],
+        "editor": ["removeformat"],
+        "sections": ["format", "alignment", "list"]
       },
       "actions": {
         "bold": {

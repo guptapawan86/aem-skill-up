@@ -34,7 +34,8 @@
   {
     "id": "richtext",
     "components": [
-      "richtext"
+      "richtext",
+      "text"
     ],
     "rte": {
       "toolbar": {

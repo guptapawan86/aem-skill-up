@@ -76,6 +76,19 @@
     ]
   },
   {
+    "id": "text",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "filter": "richtext"
+      }
+    ]
+  },
+  {
     "id": "button",
     "fields": [
       {

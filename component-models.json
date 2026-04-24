@@ -210,7 +210,8 @@
         "name": "text",
         "value": "",
         "label": "Text",
-        "valueType": "string"
+        "valueType": "string",
+        "filter": "richtext"
       }
     ]
   },
@@ -296,14 +297,16 @@
         "valueType": "string",
         "name": "summary",
         "value": "",
-        "label": "Summary"
+        "label": "Summary",
+        "filter": "richtext"
       },
       {
         "component": "richtext",
         "name": "text",
         "value": "",
         "label": "Text",
-        "valueType": "string"
+        "valueType": "string",
+        "filter": "richtext"
       }
     ]
   },
@@ -342,7 +345,8 @@
         "name": "text",
         "value": "",
         "label": "Text",
-        "valueType": "string"
+        "valueType": "string",
+        "filter": "richtext"
       }
     ]
   },
@@ -532,7 +536,8 @@
         "name": "longDescr",
         "value": "",
         "label": "Long Description",
-        "description": "The description shown in Desktop and Tablet view."
+        "description": "The description shown in Desktop and Tablet view.",
+        "filter": "richtext"
       },
       {
         "component": "richtext",
@@ -540,7 +545,8 @@
         "name": "shortDescr",
         "value": "",
         "label": "Short Description",
-        "description": "The description shown in Mobile view. If not set long text is used."
+        "description": "The description shown in Mobile view. If not set long text is used.",
+        "filter": "richtext"
       },
       {
         "component": "select",
@@ -885,7 +891,8 @@
         "name": "longDescr",
         "value": "",
         "label": "Long Description",
-        "description": "The description shown in Desktop and Tablet view."
+        "description": "The description shown in Desktop and Tablet view.",
+        "filter": "richtext"
       },
       {
         "component": "richtext",
@@ -893,7 +900,8 @@
         "name": "shortDescr",
         "value": "",
         "label": "Short Description",
-        "description": "The description shown in Mobile view. If not set long text is used."
+        "description": "The description shown in Mobile view. If not set long text is used.",
+        "filter": "richtext"
       },
       {
         "component": "select",

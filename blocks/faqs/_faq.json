@@ -46,14 +46,16 @@
           "valueType": "string",
           "name": "summary",
           "value": "",
-          "label": "Summary"
+          "label": "Summary",
+          "filter": "richtext"
         },
         {
           "component": "richtext",
           "name": "text",
           "value": "",
           "label": "Text",
-          "valueType": "string"
+          "valueType": "string",
+          "filter": "richtext"
         }
       ]
     }

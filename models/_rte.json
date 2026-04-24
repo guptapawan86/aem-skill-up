@@ -2,7 +2,6 @@
   "filters": [
     {
       "id": "richtext",
-      "components": ["richtext"],
       "rte": {
         "toolbar": {
           "format": ["bold", "italic", "underline", "strike"],
@@ -11,7 +10,7 @@
           "indentation": ["indent", "outdent"],
           "blocks": ["paragraph", "h1", "h2", "h3", "h4"],
           "list": ["bullet_list", "ordered_list"],
-          "insert": ["link", "unlink", "image", "special_characters"],
+          "insert": ["link", "unlink", "image", "table", "special_characters"],
           "sr_script": ["superscript", "subscript"],
           "editor": ["removeformat", "paste_text"],
           "sections": [
@@ -57,6 +56,11 @@
             "wrapInPicture": false,
             "shortcut": "Mod-Shift-I",
             "label": "Insert Image"
+          },
+          "table": {
+            "wrapInParagraphs": false,
+            "shortcut": "Mod-Alt-T",
+            "label": "Insert Table"
           },
           "special_characters": {
             "label": "Special Characters"

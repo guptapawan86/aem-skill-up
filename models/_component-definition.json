@@ -50,6 +50,9 @@
           "...": "../blocks/store-locator/_*.json#/definitions"
         },
         {
+          "...": "../blocks/table/_*.json#/definitions"
+        },
+        {
           "...": "../blocks/quiz/_*.json#/definitions"
         },
         {

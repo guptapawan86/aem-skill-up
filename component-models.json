@@ -1030,7 +1030,7 @@
       {
         "component": "multiselect",
         "name": "classes",
-        "value": "",
+        "value": "inline",
         "label": "Options",
         "valueType": "string",
         "options": [

@@ -2,6 +2,7 @@
   "mappings": [
     "/content/aem-skill-up/:/",
     "/content/aem-skill-up/en/:/",
+    "/docs/:/docs/"
     "/content/aem-skill-up/metadata:/metadata.json",
     "/content/aem-skill-up/en/placeholders:/placeholders.json",
     "/content/aem-skill-up/en/locations/locationslist:/locations.json",
@@ -15,5 +16,6 @@
   "includes": [
     "/content/aem-skill-up/",
     "/content/dam/aem-skill-up/"
+    "/docs/"
   ]
 }
